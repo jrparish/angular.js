@@ -453,12 +453,11 @@ The examples use the [Jasmine](http://jasmine.github.io/) testing framework.
 **Controller Test:**
 ```js
 describe('component: heroDetail', function() {
-  var component, scope, hero, $componentController;
+  var component, hero, $componentController;
 
   beforeEach(module('heroApp'));
 
-  beforeEach(inject(function($rootScope, _$componentController_) {
-    scope = $rootScope.$new();
+  beforeEach(inject(function(_$componentController_) {
     $componentController = _$componentController_;
     hero = {name: 'Wolverine'};
   }));
